@@ -26,7 +26,41 @@ Welcome to my Adobe I/O Application!
 2. Setup an ssh key for your git corp account
    * [Creating ssh key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
    * [Adding ssh key to git account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
-   * [Other Refererence link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+   * [Other Refererence article](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+  
+3. Once your ssh key has been added to you git.corp account follow these steps:
+   * ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+   * git config --get user.name "<username>"
+   * git config --global user.email "<email@adobe.com>"
+  
+4. Cloning the git repository
+   * mkdir seoguardian
+   * cd seoguardian
+   * git clone git@git.corp.adobe.com:wcms/starlord.git
+   * cd starlord
+   * git remote add upstream git@git.corp.adobe.com:wcms/starlord.git
+   * git checkout -b <branchname>
+
+5. Test if git repo is cloned and upstream is set correctly
+
+6. Get access to Adobe IO Console (connect with you reporting manager)
+
+7. Once you have access follow these steps in your terminal in you seoguardian folder
+   * aio login - this will open a window in the browser where you will login using your credentials
+   * aio console org select - Adobe Corp
+   * aio console project select - Guardian
+   * aio console workspace select - stage
+   * aio console workspace download .env
+  
+8. Create your own workspace in the Adobe Developer Console
+   * update workplace in your terminal using "aio console workspace select <yourworkspace>"
+   * aio console workspace download .env
+   * change "namespace" in the .env file to the name of your workspace
+   * aio app deploy - will give you the delayed link for your workspace which will reflect your changes.
+
+9. Run the Guardian application
+    * npm install - install all the packages in package.json
+    * aio app run
 
 ## Local Dev
 
