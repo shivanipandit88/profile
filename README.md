@@ -5,8 +5,19 @@ Welcome to my Adobe I/O Application!
 ## Setup
 
 1. Follow the below steps in your terminal:
-* - brew install nvm (Node Version Manager)
-  - Check if a .nvm folder was created by typing "ls -la" in the terminal
+* brew install nvm (Node Version Manager)
+* Check if a .nvm folder was created by typing "ls -la" in the terminal
+  - if .nvm folder doesn't exist:
+    * mkdir ~/.nvm
+    * code .zprofile (or open file in your preferred text editor. using 'code' will open the file in VScode)
+    * Add this code in the file:
+      ```bash
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+
+      export NVM_DIR="$HOME/.nvm"
+      [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh" # This loads nvm
+      [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion      
+      ```
 
 ## Local Dev
 
