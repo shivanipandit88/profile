@@ -18,6 +18,15 @@ Welcome to my Adobe I/O Application!
       [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh" # This loads nvm
       [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion      
       ```
+  - type 'nvm' in the terminal to confirm it is correctly installed
+  - nvm install 18: intall version 18
+  - npm install -g @adobe/aio-cli
+    * type 'aio' in the terminal to more info on different commands you can use
+   
+2. Setup an ssh key for your git corp account
+   * [Creating ssh key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+   * [Adding ssh key to git account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+   * [Other Refererence link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
 ## Local Dev
 
