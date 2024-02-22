@@ -5,11 +5,11 @@ Welcome to my Adobe I/O Application!
 ## Setup
 
 1. Follow the below steps in your terminal:
-   * brew install nvm (Node Version Manager)
-   * Check if a .nvm folder was created by typing "ls -la" in the terminal
+   * `brew install nvm` (Node Version Manager)
+   * Check if a .nvm folder was created by typing `ls -la` in the terminal
      - if .nvm folder doesn't exist:
-       * mkdir ~/.nvm
-       * code .zprofile (or open file in your preferred text editor. using 'code' will open the file in VScode)
+       * `mkdir ~/.nvm`
+       * `code .zprofile` (or open file in your preferred text editor. using 'code' will open the file in VScode)
        * Add this code in the file:
          ```bash
          eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -18,10 +18,10 @@ Welcome to my Adobe I/O Application!
          [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh" # This loads nvm
          [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion      
          ```
-     - type 'nvm' in the terminal to confirm it is correctly installed
-     - nvm install 18: intall version 18
-     - npm install -g @adobe/aio-cli
-   * type 'aio' in the terminal to more info on different commands you can use
+     - type `nvm` in the terminal to confirm it is correctly installed
+     - `nvm install 18` intall version 18
+     - `npm install -g @adobe/aio-cli`
+   * type `aio` in the terminal to get more info on different commands you can use
    
 2. Setup an ssh key for your git corp account
    * [Creating ssh key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
@@ -29,38 +29,38 @@ Welcome to my Adobe I/O Application!
    * [Other Refererence article](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
   
 3. Once your ssh key has been added to you git.corp account follow these steps:
-   * ssh-add --apple-use-keychain ~/.ssh/id_ed25519
-   * git config --get user.name "<username>"
-   * git config --global user.email "<email@adobe.com>"
+   * `ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
+   * `git config --get user.name "<username>"`
+   * `git config --global user.email "<email@adobe.com>"`
   
 4. Cloning the git repository
-   * mkdir seoguardian
-   * cd seoguardian
-   * git clone git@git.corp.adobe.com:wcms/starlord.git
-   * cd starlord
-   * git remote add upstream git@git.corp.adobe.com:wcms/starlord.git
-   * git checkout -b <branchname>
+   * `mkdir seoguardian`
+   * `cd seoguardian`
+   * `git clone git@git.corp.adobe.com:wcms/starlord.git`
+   * `cd starlord`
+   * `git remote add upstream git@git.corp.adobe.com:wcms/starlord.git`
+   * `git checkout -b <branchname>`
 
 5. Test if git repo is cloned and upstream is set correctly
 
 6. Get access to Adobe IO Console (connect with you reporting manager)
 
 7. Once you have access follow these steps in your terminal in you seoguardian folder
-   * aio login - this will open a window in the browser where you will login using your credentials
-   * aio console org select - Adobe Corp
-   * aio console project select - Guardian
-   * aio console workspace select - stage
-   * aio console workspace download .env
+   * `aio login` - this will open a window in the browser where you will login using your credentials
+   * `aio console org select` - Adobe Corp
+   * `aio console project select` - Guardian
+   * `aio console workspace select` - stage
+   * `aio console workspace download .env`
   
 8. Create your own workspace in the Adobe Developer Console
-   * update workplace in your terminal using "aio console workspace select <yourworkspace>"
-   * aio console workspace download .env
+   * update workplace in your terminal using `aio console workspace select <yourworkspace>`
+   * `aio console workspace download .env`
    * change "namespace" in the .env file to the name of your workspace
-   * aio app deploy - will give you the delayed link for your workspace which will reflect your changes.
+   * `aio app deploy` - will give you the delayed link for your workspace which will reflect your changes.
 
 9. Run the Guardian application
-    * npm install - install all the packages in package.json
-    * aio app run
+    * `npm install` - install all the packages in package.json
+    * `aio app run`
 
 ## Local Dev
 
